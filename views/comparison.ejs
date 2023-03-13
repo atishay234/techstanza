@@ -1,0 +1,1037 @@
+<%layout("/layouts/boilerplate")%>
+   <link rel="stylesheet" href="/css/comparisonPage.css">
+
+
+   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+   <section class="top-comparisons">
+      <h4>Top comparisons</h4>
+   
+      <div class="set">
+         <div class="first-in-set">
+            <div class="set-image">
+               <img src="<%= mobiles[0].image%> " alt="">
+   
+            </div>
+            <div class="set-text">
+               <p>
+                  <%=mobiles[0].name%>
+               </p>
+               <button>
+                  Add
+               </button>
+               
+            </div>
+   
+         </div>
+         <div class="vs">
+            <p>
+               V/S
+            </p>
+
+         </div>
+         <div class="second-in-set">
+            <div class="set-image">
+               <img src="<%= mobiles[1].image%> " alt="">
+   
+            </div>
+            <div class="set-text">
+               <p>
+                  <%=mobiles[1].name%>
+               </p>
+               <button>
+                  Add
+               </button>
+              
+   
+            </div>
+   
+         </div>
+   
+   
+      </div>
+   <div class="set">
+         <div class="first-in-set">
+            <div class="set-image">
+               <img src="<%= mobiles[4].image%> " alt="">
+   
+            </div>
+            <div class="set-text">
+               <p>
+                  <%=mobiles[4].name%>
+               </p>
+               <button>
+                  Add
+               </button>
+               
+            </div>
+   
+         </div>
+         <div class="vs">
+            <p>
+               V/S
+            </p>
+
+         </div>
+         <div class="second-in-set">
+            <div class="set-image">
+               <img src="<%= mobiles[5].image%> " alt="">
+   
+            </div>
+            <div class="set-text">
+               <p>
+                  <%=mobiles[5].name%>
+               </p>
+               <button>
+                  Add
+               </button>
+               
+   
+            </div>
+   
+         </div>
+   
+   
+      </div>
+   <div class="set">
+         <div class="first-in-set">
+            <div class="set-image">
+               <img src="<%= mobiles[2].image%> " alt="">
+   
+            </div>
+            <div class="set-text">
+               <p>
+                  <%=mobiles[2].name%>
+               </p>
+               <button>
+                  Add
+               </button>
+               
+            </div>
+   
+         </div>
+         <div class="vs">
+            <p>
+               V/S
+            </p>
+
+         </div>
+         <div class="second-in-set">
+            <div class="set-image">
+               <img src="<%= mobiles[3].image%> " alt="">
+   
+            </div>
+            <div class="set-text">
+               <p>
+                  <%=mobiles[3].name%>
+               </p>
+               <button>
+                  Add+
+               </button>
+             
+   
+            </div>
+   
+         </div>
+   
+   
+      </div>
+   
+   
+   
+   </section>
+
+
+   <section class="main-section">
+      <div class="upper-strip">
+         <div class="mobile-name first">
+            <span class="firstMobUpper UpperName">
+               <% if(mobileFound!=="null"){ %> 
+                  <strong>
+                    <%=mobileFound.name%>
+                  </strong>
+                  <% }else{ %>
+                      <strong>Add Mobile</strong>
+
+                  <% } %> 
+                   
+            </span>
+            <span
+               style="display:block; color:black;color: #98c1d9;width: 20px;transform: translateY(-11px);">&#9660;</span>
+         </div>
+         <div class="seperator">
+
+         </div>
+         <div class="mobile-name second" style="height: 20px;">
+            <span class="secondMobUpper UpperName">Add Mobile</span>
+            <span
+               style="display:block; color:black;color: #98c1d9;width: 20px;transform: translateY(-11px);">&#9660;</span>
+         </div>
+         <div class="seperator third">
+
+         </div>
+
+         <div class="mobile-name third">
+            <span class="thirdMobUpper UpperName">Add Mobile</span>
+            <span
+               style="display:block; color:black;color: #98c1d9;width: 20px;transform: translateY(-11px);">&#9660;</span>
+         </div>
+      </div>
+      <section class="mainSection">
+
+
+         <% if(mobileFound!=="null"){ %> 
+          
+         <div class="firstMobile comparison">
+
+            <div class="upperSection">
+               <input type="text" class="mobileInput" placeholder="search here to add" placeholder="Search here to add">
+               <div class="searchResult">
+               </div>
+               <button class="btn btn-danger btn-sm customButton">
+                  <i class="far fa-times-circle"></i>
+               </button>
+            </div>
+
+
+            <div class="phoneImage">
+               <img src="<%=mobileFound.image%>" alt="" width="100%" height="100%" class="originalImage"
+                  style="border: none;">
+            </div>
+            <div class="indiDetails">
+               <table class="tab display">
+                  <thead class="proTitle">
+                     <tr>
+                        <th>display</th>
+                     </tr>
+                  </thead>
+                  <tbody class="tbody">
+                     <tr class="indipro">
+                        <td> <strong>Size </strong>
+                           <%=mobileFound.Display.size%>
+                        </td>
+                        <td> <strong>Resolution </strong>
+                           <%=mobileFound.Display.resolution%>
+                        </td>
+                        <td> <strong>Type </strong>
+                           <%=mobileFound.Display.category%>
+                        </td>
+                        <td> <strong>refreshrate </strong>
+                           <%=mobileFound.refreshrate%>
+                        </td>
+                     </tr>
+                  </tbody>
+
+
+               </table>
+               <table class="tab performance">
+                  <thead class="proTitle">
+                     <tr>
+                        <th>Performance</th>
+                     </tr>
+                  </thead>
+                  <tbody class="tbody">
+                     <tr class="indipro">
+                        <td><strong>type</strong>
+                           <%=mobileFound.processor.category%>
+                        </td>
+                        <td> <strong>Core</strong>
+                           <%= mobileFound.processor.Core%>
+                        </td>
+                        <td> <strong>Clock Speed</strong>
+                           <%= mobileFound.processor.clockSpeed %>
+                        </td>
+                     </tr>
+                  </tbody>
+
+
+               </table>
+               <table class="tab battery">
+                  <thead class="proTitle">
+                     <tr>
+                        <th>Battery</th>
+                     </tr>
+                  </thead>
+                  <tbody class="tbody">
+                     <tr class="indipro">
+                        <td><strong>Capacity</strong>
+                           <%= mobileFound.BatteryCapacity %> mah
+                        </td>
+                        <!-- <td>Lasts Up to:</td>
+                        <td>battery type</td> -->
+                     </tr>
+                  </tbody>
+
+
+               </table>
+               <table class="tab frontcamera">
+                  <thead class="proTitle">
+                     <tr>
+                        <th>Front camera</th>
+                     </tr>
+                  </thead>
+                  <tbody class="tbody">
+                     <tr class="indipro">
+                        <td><strong>pixels: </strong>
+                           <%= mobileFound.frontCamera.pixels[0].pixel %>
+                        </td>
+                        <td> <strong>type:</strong>
+                           <%= mobileFound.frontCamera.noOfCameras %>
+                        </td>
+                        <td><strong>description</strong>
+                           <%= mobileFound.frontCamera.pixels[0].description %>
+                        </td>
+                     </tr>
+                  </tbody>
+
+
+               </table>
+               <table class="tab maincamera">
+                  <thead class="proTitle">
+                     <tr>
+                        <th>Main camera</th>
+                     </tr>
+                  </thead>
+                  <tbody class="tbody">
+                     <tr class="indipro">
+                        <td> <strong>pixels:</strong>
+                           <%= mobileFound.mainCamera.pixels[0].pixel %>
+                        </td>
+                        <td> <strong>type:</strong>
+                           <%= mobileFound.mainCamera.noOfCameras %>
+                        </td>
+                        <td><strong>description</strong>
+                           <%= mobileFound.mainCamera.pixels[0].description %>
+                        </td>
+                     </tr>
+                  </tbody>
+
+
+               </table>
+               <table class="tab memory">
+                  <thead class="proTitle">
+                     <tr>
+                        <th>Memory</th>
+                     </tr>
+                  </thead>
+                  <tbody class="tbody">
+                     <tr class="indipro">
+                        <td> <strong>internal storage:</strong>
+                           <%= mobileFound.memory.internalStorage %>
+                        </td>
+                        <td><strong>ram</strong>
+                           <%= mobileFound.memory.ram %>
+                        </td>
+                        <td><strong>expandable </strong>
+                           <%= mobileFound.memory.expandableStorage %>
+                        </td>
+                     </tr>
+                  </tbody>
+
+
+               </table>
+               <table class="tab dimensions">
+                  <thead class="proTitle">
+                     <tr>
+                        <th>dimensions</th>
+                     </tr>
+                  </thead>
+                  <tbody class="tbody">
+                     <tr class="indipro">
+                        <td> <strong>width</strong>
+                           <%= mobileFound.Dimensions.width %> inches
+                        </td>
+                        <td> <strong>height </strong>
+                           <%= mobileFound.Dimensions.height %> inches
+                        </td>
+                        <td> <strong>weight</strong>
+                           <%= mobileFound.Dimensions.weight %> gm
+                        </td>
+                     </tr>
+                  </tbody>
+
+
+               </table>
+               <table class="tab network">
+                  <thead class="proTitle">
+                     <tr>
+                        <th>Network</th>
+                     </tr>
+                  </thead>
+                  <tbody class="tbody">
+                     <tr class="indipro">
+                        <td><strong> type</strong>
+                           <%= mobileFound.network.category %>
+                        </td>
+                        <td> <strong>bluetooth</strong>
+                           <%= mobileFound.network.bluetoothVersion %>
+                        </td>
+                        <td> <strong>NFC</strong>
+                           <%= mobileFound.network.nfc %>
+                        </td>
+                     </tr>
+                  </tbody>
+
+
+               </table>
+               <table class="tab userInterface">
+                  <thead class="proTitle">
+                     <tr>
+                        <th>User Interface</th>
+                     </tr>
+                  </thead>
+                  <tbody class="tbody">
+                     <tr class="indipro">
+                        <td> <strong>UI</strong>
+                           <%= mobileFound.userInterface %>
+                        </td>
+                        <td> <strong>Operating System</strong>
+                           <%= mobileFound.processor.operatingSystem %>
+                        </td>
+                        <td> <strong>GPU</strong>
+                           <%= mobileFound.Display.GPU %>
+                        </td>
+                     </tr>
+                  </tbody>
+
+
+               </table>
+
+               <table class="tab others">
+                  <thead class="proTitle">
+                     <tr>
+                        <th>Some more</th>
+                     </tr>
+                  </thead>
+                  <tbody class="tbody">
+                     <tr class="indipro">
+                        <td> <strong>sound</strong>
+                           <%= mobileFound.sound %>
+                        </td>
+                        <td> <strong>sim</strong>
+                           <%= mobileFound.simType %>
+                        </td>
+                        <td> <strong>infrared</strong>
+                           <%= mobileFound.network.infrared %>
+                        </td>
+                        <td> <strong>Audio Jack</strong>
+                           <%= mobileFound.network.audioJack %>
+                        </td>
+                        <td> <strong>In Box </strong>
+                           <%= mobileFound.Box%>
+                        </td>
+
+                     </tr>
+                  </tbody>
+
+
+               </table>
+
+            </div>
+
+         </div>
+         <% }else{ %> 
+         <div class="firstMobile comparison">
+
+            <div class="upperSection">
+               <input type="text" class="mobileInput" placeholder="search here to add" placeholder="Search here to add">
+               <div class="searchResult">
+               </div>
+               <button class="btn btn-danger btn-sm customButton">
+                  <i class="far fa-times-circle"></i>
+               </button>
+            </div>
+
+
+            <div class="phoneImage">
+               <img src="" alt="" width="100%" height="100%" class="originalImage"
+                  style="border: none;">
+            </div>
+            <div class="indiDetails">
+               <table class="tab display">
+                  <thead class="proTitle">
+                     <tr>
+                        <th>display</th>
+                     </tr>
+                  </thead>
+                  <tbody class="tbody">
+                     <tr class="indipro">
+                        <td> <strong>Size </strong>
+                           
+                        </td>
+                        <td> <strong>Resolution </strong>
+                           
+                        </td>
+                        <td> <strong>Type </strong>
+                           
+                        </td>
+                        <td> <strong>refreshrate </strong>
+                           
+                        </td>
+                     </tr>
+                  </tbody>
+
+
+               </table>
+               <table class="tab performance">
+                  <thead class="proTitle">
+                     <tr>
+                        <th>Performance</th>
+                     </tr>
+                  </thead>
+                  <tbody class="tbody">
+                     <tr class="indipro">
+                        <td><strong>type</strong>
+                        </td>
+                        <td> <strong>Core</strong>
+                        </td>
+                        <td> <strong>Clock Speed</strong>
+                        </td>
+                     </tr>
+                  </tbody>
+
+
+               </table>
+               <table class="tab battery">
+                  <thead class="proTitle">
+                     <tr>
+                        <th>Battery</th>
+                     </tr>
+                  </thead>
+                  <tbody class="tbody">
+                     <tr class="indipro">
+                        <td><strong>Capacity</strong>
+                        </td>
+                        <!-- <td>Lasts Up to:</td>
+                        <td>battery type</td> -->
+                     </tr>
+                  </tbody>
+
+
+               </table>
+               <table class="tab frontcamera">
+                  <thead class="proTitle">
+                     <tr>
+                        <th>Front camera</th>
+                     </tr>
+                  </thead>
+                  <tbody class="tbody">
+                     <tr class="indipro">
+                        <td><strong>pixels: </strong>
+                        </td>
+                        <td> <strong>type:</strong>
+                        </td>
+                        <td><strong>description</strong>
+                        </td>
+                     </tr>
+                  </tbody>
+
+
+               </table>
+               <table class="tab maincamera">
+                  <thead class="proTitle">
+                     <tr>
+                        <th>Main camera</th>
+                     </tr>
+                  </thead>
+                  <tbody class="tbody">
+                     <tr class="indipro">
+                        <td> <strong>pixels:</strong>
+                        </td>
+                        <td> <strong>type:</strong>
+                        </td>
+                        <td><strong>description</strong>
+                        </td>
+                     </tr>
+                  </tbody>
+
+
+               </table>
+               <table class="tab memory">
+                  <thead class="proTitle">
+                     <tr>
+                        <th>Memory</th>
+                     </tr>
+                  </thead>
+                  <tbody class="tbody">
+                     <tr class="indipro">
+                        <td> <strong>internal storage:</strong>
+                        </td>
+                        <td><strong>ram</strong>
+                          
+                        </td>
+                        <td><strong>expandable </strong>
+                        
+                        </td>
+                     </tr>
+                  </tbody>
+
+
+               </table>
+               <table class="tab dimensions">
+                  <thead class="proTitle">
+                     <tr>
+                        <th>dimensions</th>
+                     </tr>
+                  </thead>
+                  <tbody class="tbody">
+                     <tr class="indipro">
+                        <td> <strong>width</strong>
+                           
+                        </td>
+                        <td> <strong>height </strong>
+                          
+                        </td>
+                        <td> <strong>weight</strong>
+                           
+                        </td>
+                     </tr>
+                  </tbody>
+
+
+               </table>
+               <table class="tab network">
+                  <thead class="proTitle">
+                     <tr>
+                        <th>Network</th>
+                     </tr>
+                  </thead>
+                  <tbody class="tbody">
+                     <tr class="indipro">
+                        <td><strong> type</strong>
+                        </td>
+                        <td> <strong>bluetooth</strong>
+                        </td>
+                        <td> <strong>NFC</strong>
+                        </td>
+                     </tr>
+                  </tbody>
+
+
+               </table>
+               <table class="tab userInterface">
+                  <thead class="proTitle">
+                     <tr>
+                        <th>User Interface</th>
+                     </tr>
+                  </thead>
+                  <tbody class="tbody">
+                     <tr class="indipro">
+                        <td> <strong>UI</strong>
+                        </td>
+                        <td> <strong>Operating System</strong>
+                        </td>
+                        <td> <strong>GPU</strong>
+                        </td>
+                     </tr>
+                  </tbody>
+
+
+               </table>
+
+               <table class="tab others">
+                  <thead class="proTitle">
+                     <tr>
+                        <th>Some more</th>
+                     </tr>
+                  </thead>
+                  <tbody class="tbody">
+                     <tr class="indipro">
+                        <td> <strong>sound</strong>
+                           
+                        </td>
+                        <td> <strong>sim</strong>
+                        </td>
+                        <td> <strong>infrared</strong>
+                           
+                        </td>
+                        <td> <strong>Audio Jack</strong>
+                        </td>
+                        <td> <strong>In Box </strong>
+                        </td>
+
+                     </tr>
+                  </tbody>
+
+
+               </table>
+
+            </div>
+
+         </div>
+         <% } %> 
+         <div class="secondMobile comparison">
+
+            <div class="upperSection">
+               <input type="text" class="mobileInput" placeholder="search here to add">
+               <div class="searchResult">
+               </div>
+               <button class="btn btn-danger btn-sm customButton">
+                  <i class="far fa-times-circle"></i>
+               </button>
+            </div>
+
+            <div class="phoneImage">
+               <img src="" alt="" width="100%" height="100%" class="originalImage">
+            </div>
+            <div class="indiDetails">
+               <table class="tab display">
+                  <thead class="proTitle">
+                     <tr>
+                        <th>display</th>
+                     </tr>
+                  </thead>
+                  <tbody class="tbody">
+                     <tr class="indipro">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                     </tr>
+                  </tbody>
+
+
+               </table>
+               <table class="tab performance">
+                  <thead class="proTitle">
+                     <tr>
+                        <th>Performance</th>
+                     </tr>
+                  </thead>
+                  <tbody class="tbody">
+                     <tr class="indipro">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                     </tr>
+                  </tbody>
+
+
+               </table>
+               <table class="tab battery">
+                  <thead class="proTitle">
+                     <tr>
+                        <th>Battery</th>
+                     </tr>
+                  </thead>
+                  <tbody class="tbody">
+                     <tr class="indipro">
+                        <td></td>
+
+                     </tr>
+                  </tbody>
+
+
+               </table>
+               <table class="tab frontcamera">
+                  <thead class="proTitle">
+                     <tr>
+                        <th>Front camera</th>
+                     </tr>
+                  </thead>
+                  <tbody class="tbody">
+                     <tr class="indipro">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                     </tr>
+                  </tbody>
+
+
+               </table>
+               <table class="tab maincamera">
+                  <thead class="proTitle">
+                     <tr>
+                        <th>main camera</th>
+                     </tr>
+                  </thead>
+                  <tbody class="tbody">
+                     <tr class="indipro">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                     </tr>
+                  </tbody>
+
+
+               </table>
+               <table class="tab memory">
+                  <thead class="proTitle">
+                     <tr>
+                        <th>memory</th>
+                     </tr>
+                  </thead>
+                  <tbody class="tbody">
+                     <tr class="indipro">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                     </tr>
+                  </tbody>
+
+
+               </table>
+               <table class="tab dimensions">
+                  <thead class="proTitle">
+                     <tr>
+                        <th>dimensions</th>
+                     </tr>
+                  </thead>
+                  <tbody class="tbody">
+                     <tr class="indipro">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                     </tr>
+                  </tbody>
+
+
+               </table>
+               <table class="tab network">
+                  <thead class="proTitle">
+                     <tr>
+                        <th>Network</th>
+                     </tr>
+                  </thead>
+                  <tbody class="tbody">
+                     <tr class="indipro">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                     </tr>
+                  </tbody>
+
+
+               </table>
+               <table class="tab userInterface">
+                  <thead class="proTitle">
+                     <tr>
+                        <th>User Interface</th>
+                     </tr>
+                  </thead>
+                  <tbody class="tbody">
+                     <tr class="indipro">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                     </tr>
+                  </tbody>
+
+
+               </table>
+               <table class="tab others">
+                  <thead class="proTitle">
+                     <tr>
+                        <th>some more</th>
+                     </tr>
+                  </thead>
+                  <tbody class="tbody">
+                     <tr class="indipro">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+
+                     </tr>
+                  </tbody>
+
+
+               </table>
+
+
+            </div>
+         </div>
+         <div class="thirdMobile comparison" style="background-color: #ffffff;">
+            <div class="upperSection">
+               <input type="text" class="mobileInput" placeholder="search here to add">
+               <div class="searchResult">
+               </div>
+               <button class="btn btn-danger btn-sm customButton">
+                  <i class="far fa-times-circle"></i>
+               </button>
+            </div>
+
+            <div class="phoneImage">
+               <img src="" alt="" width="100%" height="100%" class="originalImage">
+            </div>
+            <div class="indiDetails">
+               <table class="tab display">
+                  <thead class="proTitle">
+                     <tr>
+                        <th>display</th>
+                     </tr>
+                  </thead>
+                  <tbody class="tbody">
+                     <tr class="indipro">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+
+                     </tr>
+                  </tbody>
+
+
+               </table>
+               <table class="tab performance">
+                  <thead class="proTitle">
+                     <tr>
+                        <th>Performance</th>
+                     </tr>
+                  </thead>
+                  <tbody class="tbody">
+                     <tr class="indipro">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                     </tr>
+                  </tbody>
+
+
+               </table>
+               <table class="tab battery">
+                  <thead class="proTitle">
+                     <tr>
+                        <th>Battery</th>
+                     </tr>
+                  </thead>
+                  <tbody class="tbody">
+                     <tr class="indipro">
+                        <td></td>
+
+                     </tr>
+                  </tbody>
+
+
+               </table>
+               <table class="tab frontcamera">
+                  <thead class="proTitle">
+                     <tr>
+                        <th>Front camera</th>
+                     </tr>
+                  </thead>
+                  <tbody class="tbody">
+                     <tr class="indipro">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                     </tr>
+                  </tbody>
+
+
+               </table>
+               <table class="tab maincamera">
+                  <thead class="proTitle">
+                     <tr>
+                        <th>main camera</th>
+                     </tr>
+                  </thead>
+                  <tbody class="tbody">
+                     <tr class="indipro">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                     </tr>
+                  </tbody>
+
+
+               </table>
+               <table class="tab memory">
+                  <thead class="proTitle">
+                     <tr>
+                        <th>memory</th>
+                     </tr>
+                  </thead>
+                  <tbody class="tbody">
+                     <tr class="indipro">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                     </tr>
+                  </tbody>
+
+
+               </table>
+               <table class="tab dimensions">
+                  <thead class="proTitle">
+                     <tr>
+                        <th>dimensions</th>
+                     </tr>
+                  </thead>
+                  <tbody class="tbody">
+                     <tr class="indipro">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                     </tr>
+                  </tbody>
+
+
+               </table>
+               <table class="tab network">
+                  <thead class="proTitle">
+                     <tr>
+                        <th>Network</th>
+                     </tr>
+                  </thead>
+                  <tbody class="tbody">
+                     <tr class="indipro">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                     </tr>
+                  </tbody>
+
+
+               </table>
+               <table class="tab userInterface">
+                  <thead class="proTitle">
+                     <tr>
+                        <th>User Interface</th>
+                     </tr>
+                  </thead>
+                  <tbody class="tbody">
+                     <tr class="indipro">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                     </tr>
+                  </tbody>
+
+
+               </table>
+               <table class="tab others">
+                  <thead class="proTitle">
+                     <tr>
+                        <th>some more</th>
+                     </tr>
+                  </thead>
+                  <tbody class="tbody">
+                     <tr class="indipro">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                     </tr>
+                  </tbody>
+
+
+               </table>
+
+            </div>
+
+         </div>
+
+      </section>
+   </section>
+
+   <div class="fake">
+      <img src="" alt="" width="40%" height="100%">
+      <div class="buttonSection">
+         <span class="nameMobile"></span>
+
+      </div>
+   </div>
+
+   <script src="/javascript/comparison.js"></script>

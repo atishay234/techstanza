@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="171" height="88.151" viewBox="0 0 171 88.151">
+  <defs>
+    <style>
+      .cls-6 {
+        fill: #fff;
+        stroke: #707070;
+      }
+
+      .cls-7 {
+        fill: rgba(0,0,0,0);
+      }
+
+      .cls-8 {
+        fill: none;
+      }
+
+      .cls-9 {
+        font-size: 13px;
+        font-family: SegoeUI, Segoe UI;
+      }
+
+      .cls-10 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="Group_7" data-name="Group 7" transform="translate(-409 -2198)">
+    <g id="Rectangle_9" data-name="Rectangle 9" class="cls-6" transform="translate(409 2198)">
+      <rect class="cls-10" width="53" height="88" rx="5"/>
+      <rect class="cls-8" x="0.5" y="0.5" width="52" height="87" rx="4.5"/>
+    </g>
+    <g id="Rectangle_10" data-name="Rectangle 10" class="cls-6" transform="translate(527 2198)">
+      <rect class="cls-10" width="53" height="88" rx="5"/>
+      <rect class="cls-8" x="0.5" y="0.5" width="52" height="87" rx="4.5"/>
+    </g>
+    <g id="Group_6" data-name="Group 6" transform="translate(484.591 2198)">
+      <g id="camera_alt_black_24dp">
+        <path id="Path_13" data-name="Path 13" class="cls-7" d="M0,0H15.776V15.671H0Z"/>
+        <path id="Path_14" data-name="Path 14" d="M13.832,3.306H11.748L10.545,2H6.6L5.4,3.306H3.315A1.314,1.314,0,0,0,2,4.612v7.836a1.314,1.314,0,0,0,1.315,1.306H13.832a1.314,1.314,0,0,0,1.315-1.306V4.612A1.314,1.314,0,0,0,13.832,3.306Zm0,9.142H3.315V4.612H5.977l1.2-1.306H9.967l1.2,1.306h2.662ZM8.573,5.265A3.265,3.265,0,1,0,11.86,8.53,3.277,3.277,0,0,0,8.573,5.265Zm0,5.224A1.959,1.959,0,1,1,10.545,8.53,1.971,1.971,0,0,1,8.573,10.489Z" transform="translate(-0.685 -0.694)"/>
+      </g>
+      <g id="memory_black_24dp_1_" data-name="memory_black_24dp (1)" transform="translate(0 19.589)">
+        <path id="Path_15" data-name="Path 15" class="cls-8" d="M0,0H15.776V15.671H0Z"/>
+        <path id="Path_16" data-name="Path 16" d="M10.888,6.918H6.944v3.918h3.944ZM9.573,9.53H8.259V8.224H9.573Zm5.259-1.306V6.918H13.517V5.612A1.314,1.314,0,0,0,12.2,4.306H10.888V3H9.573V4.306H8.259V3H6.944V4.306H5.629A1.314,1.314,0,0,0,4.315,5.612V6.918H3V8.224H4.315V9.53H3v1.306H4.315v1.306a1.314,1.314,0,0,0,1.315,1.306H6.944v1.306H8.259V13.448H9.573v1.306h1.315V13.448H12.2a1.314,1.314,0,0,0,1.315-1.306V10.836h1.315V9.53H13.517V8.224ZM12.2,12.142H5.629V5.612H12.2Z" transform="translate(-1.028 -1.041)"/>
+      </g>
+      <g id="brush_black_24dp" transform="translate(0 56.809)">
+        <path id="Path_17" data-name="Path 17" class="cls-8" d="M0,0H15.776V15.671H0Z"/>
+        <path id="Path_18" data-name="Path 18" d="M5.287,11.489a.657.657,0,0,1,.657.653,1.314,1.314,0,0,1-1.315,1.306,1.869,1.869,0,0,1-.329-.033,2.564,2.564,0,0,0,.329-1.273.657.657,0,0,1,.657-.653M12.957,3a.676.676,0,0,0-.467.189L6.6,9.04l1.808,1.8L14.3,4.985a.647.647,0,0,0,0-.921l-.881-.875A.644.644,0,0,0,12.957,3ZM5.287,10.183a1.963,1.963,0,0,0-1.972,1.959A1.33,1.33,0,0,1,2,13.448a3.409,3.409,0,0,0,2.629,1.306,2.62,2.62,0,0,0,2.629-2.612A1.963,1.963,0,0,0,5.287,10.183Z" transform="translate(-0.685 -1.041)"/>
+      </g>
+      <g id="battery_full_black_24dp" transform="translate(0 72.48)">
+        <path id="Path_19" data-name="Path 19" class="cls-8" d="M0,0H15.776V15.671H0Z"/>
+        <path id="Path_20" data-name="Path 20" d="M12.7,3.306H11.6V2H8.972V3.306h-1.1A.875.875,0,0,0,7,4.174v10.01a.877.877,0,0,0,.874.875h4.818a.877.877,0,0,0,.881-.868V4.174A.875.875,0,0,0,12.7,3.306Z" transform="translate(-2.399 -0.694)"/>
+      </g>
+    </g>
+    <text id="v_s" data-name="v/s" class="cls-9" transform="translate(493 2247)"><tspan x="-8.404" y="0">v/s</tspan></text>
+    <g id="Ellipse_3" data-name="Ellipse 3" class="cls-6" transform="translate(413 2203)">
+      <circle class="cls-10" cx="2.5" cy="2.5" r="2.5"/>
+      <circle class="cls-8" cx="2.5" cy="2.5" r="2"/>
+    </g>
+    <g id="Ellipse_4" data-name="Ellipse 4" class="cls-6" transform="translate(532 2203)">
+      <circle class="cls-10" cx="2.5" cy="2.5" r="2.5"/>
+      <circle class="cls-8" cx="2.5" cy="2.5" r="2"/>
+    </g>
+  </g>
+</svg>

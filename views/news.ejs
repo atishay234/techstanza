@@ -1,0 +1,94 @@
+<%layout("/layouts/boilerplate")%>
+
+
+<link rel="stylesheet" href="/css/newsStyles.css">
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+
+
+
+<section class="back">
+   <div class="trending">
+
+   </div>
+
+    
+ 
+</section>
+
+
+<section class="news-section">
+
+    <%for(let news of allnews){%>
+    <div class="news-card">
+        <div class="brand-name">
+            <span><%=news.brand%></span>
+    
+        </div>
+        <div class="share-icon">
+            
+        </div>
+    
+        <div class="news-image">
+            <img src="<%=news.image%>" alt="">
+            <div class="date-added"><%=news.dated%></div>
+        </div>
+        <div class="news-heading">
+            <p><%=news.heading%></p>
+        </div>
+        <div class="read-more">
+            <a href="/news/<%=news._id%>">Read More</a>
+        </div>
+    
+        <div class="icons">
+            <button class="buttons upvote" data-news=<%=news._id%> data-upvoted=<%if(currentUser){%>
+                <%= (news.upVotes.includes(currentUser.id)) %>
+                <% }else{ %>
+                    <%=false%>
+                    
+                    <% } %> 
+                    
+            >
+            
+            <i class="fas fa-bolt"></i><span></i><%=news.upVotes.length%></span></button>
+            <button class="buttons downvote" data-news="<%=news._id%>" data-downvoted=<%if(currentUser){%>
+                <%= (news.downVotes.includes(currentUser.id)) %>
+                <% }else{ %>
+                    <%=false%>
+                    
+                    <% } %>><i class="far fa-angry"></i> <span><%=news.downVotes.length%></span></button>
+           
+            <a href=""><i class="fas fa-paper-plane"></i></a>
+        </div>
+
+        <div class="comments-div">
+                
+            <div class="comments">
+             <span class="close-btn">&times;</span>
+                
+                <div>
+                    <span class="comment-title">Comments</span>
+                   <div class="one-comment">
+                       <span>
+                           Atishay Jain
+                       </span>
+                   </div>
+                    
+                </div>
+
+            </div>
+
+         </div>
+    </div>
+    
+    <%}%>    
+
+
+
+
+ </section>
+
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+ <script src="/javascript/news.js"></script>

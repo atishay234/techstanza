@@ -1,0 +1,504 @@
+body {
+  overflow-x: hidden;
+}
+
+#search::placeholder {
+  color: black;
+  opacity: 0.8;
+}
+
+#search::-ms-input-placeholder {
+  color: black;
+}
+
+#search::-ms-input-placeholder {
+  color: black;
+}
+.landing-feature {
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  overflow: hidden;
+}
+.first {
+  width: 50%;
+  height: 100%;
+  /* margin-right: 10%; */
+  transform: translateX(-5%);
+  flex-direction: column;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+.first p {
+  font-size: xx-large;
+  font-weight: 600;
+  width: 50%;
+}
+.first ul {
+  box-shadow: 0px 0px 10px lightgray;
+  width: 50%;
+  padding: 20px;
+  list-style-type: none;
+  /* padding: 0; */
+}
+
+.process {
+  width: 50%;
+  height: 40%;
+  display: flex;
+  animation: scalify 1.5s ease;
+}
+@keyframes scalify {
+  from {
+    transform: scale(2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.process > img {
+  width: 50px;
+  height: 50px;
+  margin-top: 10%;
+}
+.iprocess {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+}
+.iprocess p {
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  height: fit-content;
+
+  font-size: medium;
+}
+
+.iprocess img {
+  width: 100%;
+  height: 100%;
+}
+.conclusion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.conclusion img {
+  width: 80%;
+  height: 80%;
+}
+#blob-background {
+  position: absolute;
+  filter: blur(150px);
+  transform: rotate(45deg);
+  height: 500px;
+  width: 500px;
+}
+
+.second {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  display: flex;
+
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+
+  /* justify-content: space-around; */
+  /* background-color: #adb5bd; */
+  /* transform: rotate(25deg) translateY(-20%); */
+}
+
+.need {
+  margin-top: 20px;
+  width: 26%;
+  margin: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+  height: 25%;
+  /* transform: rotate(25deg); */
+  background-color: transparent;
+  /* border: 1px solid black; */
+  z-index: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 5px;
+  justify-content: space-between;
+  align-items: center;
+}
+.need:nth-of-type(1) {
+  animation: focus 1s ease-in-out alternate;
+}
+@keyframes focus {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.need:nth-of-type(4) {
+  background-color: transparent;
+  color: black;
+  box-shadow: none;
+  animation: Flicker 0.5s ease-in 2s;
+}
+.need:nth-of-type(2) {
+  animation: Darken 1s ease-in-out alternate 1s;
+}
+
+@keyframes Flicker {
+  from {
+    transform: scale(1.2);
+    background-color: white;
+  }
+  to {
+    transform: scale(1);
+    background-color: transparent;
+  }
+}
+@keyframes Darken {
+  from {
+    opacity: 1;
+    color: black;
+    background-color: transparent;
+  }
+  to {
+    opacity: 0.6;
+    color: white;
+    background-color: black;
+  }
+}
+
+.need:last-of-type img {
+  animation: Zoom 1s ease-in-out alternate 3s;
+}
+
+@keyframes Zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+
+.need img {
+  /* filter: blur(1px); */
+  /* opacity: 0.7; */
+  z-index: 0;
+  /* position: absolute; */
+  width: 100%;
+  height: 70%;
+}
+.need p {
+  z-index: 1;
+  font-weight: 500;
+  font-size: medium;
+  margin: 0;
+  text-align: center;
+}
+
+.mainF {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #343a40;
+  color: whitesmoke;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+}
+.mainF:nth-of-type(3) {
+  margin: 0;
+}
+
+.actualC {
+  width: 100vw;
+  /* margin-top: 50px; */
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  /* margin-top: 30px; */
+  flex-wrap: wrap;
+  background: hsl(216, 28%, 93%);
+  /* margin-top: 10px; */
+}
+.actual {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  /* margin-top: 30px; */
+  flex-wrap: wrap;
+  /* background: hsl(216, 28%, 93%); */
+  /* margin-top: 10px; */
+  /* margin-left: 10%; */
+}
+.card {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  max-height: fit-content;
+  flex-direction: column;
+  border-radius: 15px;
+  margin: 20px;
+  border: none;
+  /* justify-content: space-between; */
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  background-color: white;
+}
+.card:hover {
+  transform: perspective(800px) translateZ(15px);
+  /* box-shadow: 0px 0px 10px lightgray; */
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.card img {
+  height: 200px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 10px;
+}
+.ratings {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.rating {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0p 0p 10px lightgray;
+}
+.rating span {
+  position: absolute;
+  font-weight: 500;
+}
+#company {
+  height: 20%;
+  width: 50%;
+  transform: translateY(80%);
+  /* transform: translateX(-200%); */
+  font-size: xx-large;
+}
+
+.secondSlide {
+  width: 100%;
+  /* position: relative; */
+  /* width: 100%; */
+  height: 100%;
+  color: black;
+  padding: 20px;
+  background-color: lightskyblue;
+  border-radius: 20px;
+  font-size: large;
+  font-weight: 500;
+  align-self: center;
+
+  display: none;
+
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  margin-top: 200%;
+}
+
+.view-compare {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+}
+.view {
+  text-decoration: none;
+  background-color: transparent;
+  color: black;
+  margin-bottom: 10px;
+  width: 45%;
+  align-self: center;
+  text-align: center;
+  border-radius: 5px;
+  margin-right: 5px;
+  padding: 5px;
+  margin-top: 2%;
+  border: 1px solid lightgray;
+}
+.view:hover {
+  background-color: #0096c7;
+  color: white;
+  transition: 0.3s;
+}
+.view-compare a:nth-of-type(2) {
+  background: #4361ee;
+  border: 1px solid lightgray;
+  color: white;
+  width: 45%;
+  height: fit-content;
+  padding: 5px;
+  margin-top: 2%;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.view-compare a:nth-of-type(2):hover {
+  background-position: center;
+}
+
+.message:hover .mainmessage {
+  display: none;
+}
+.message:hover .secondSlide {
+  opacity: 1;
+  display: flex;
+}
+.mainmessage {
+  width: 100%;
+}
+
+.message:hover {
+  padding: 0;
+}
+
+.outerclass {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.oneclass {
+  padding: 5px;
+  width: 32%;
+  text-align: center;
+}
+
+.list {
+  font-size: small;
+  padding: 0;
+  margin-top: 10px;
+  border-right: 0.5px solid lightgray;
+  width: 100%;
+  height: 70%;
+}
+
+.element {
+  padding: 5px;
+}
+@media screen and (max-width: 1180px) {
+  .mainN {
+    font-size: small;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .card {
+    width: 35%;
+  }
+  .first p {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .main {
+    margin-top: 50px;
+  }
+  .card {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .message {
+    height: 40%;
+    /* min-width: 400px; */
+    /* transform: translateX(100%); */
+    /* width: 300px; */
+    padding-left: 20px;
+  }
+  .mainmessage {
+    font-size: medium;
+  }
+  .secondSlide {
+    font-size: small;
+  }
+  .card {
+    width: 70%;
+  }
+  .mainN {
+    font-size: smaller;
+  }
+  .ratings {
+    margin-bottom: 30px;
+  }
+  .landing-feature {
+    height: 90vh;
+    flex-wrap: wrap;
+  }
+  .first {
+    width: 100%;
+    height: 50%;
+    transform: translateX(0);
+    justify-content: flex-end;
+  }
+  .first p {
+    width: 80%;
+  }
+  .process {
+    width: 80%;
+  }
+  .second {
+    width: 100%;
+    height: 50%;
+  }
+  .need {
+    height: 40%;
+    flex-grow: 1;
+  }
+  .process {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .card {
+    width: 80%;
+  }
+  #blob-background {
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .card {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 350px) {
+  .card {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .first > p {
+    margin-top: 20px;
+    font-size: large;
+  }
+}
+@media screen and (max-width: 300px) {
+  .card {
+    width: 95%;
+  }
+}

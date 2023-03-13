@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8f234dc5-9efb-4cc4-9a6c-d22023ddb0b0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../models/mobile.js" beforeDir="false" afterPath="$PROJECT_DIR$/../models/mobile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Group 3.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Group 5.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Group 7.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/contentPageStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/contentPageStyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/feature.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/feature.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/footerstyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/footerstyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/navbarStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/navbarStyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript/content.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/content.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../views/content.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../views/content.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../views/home.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../views/home.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../views/layouts/boilerplate.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../views/layouts/boilerplate.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../views/partials/navbar.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../views/partials/navbar.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../views/specific.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../views/specific.ejs" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1uCnjAtASDsCimF93iTTQr36kft" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8f234dc5-9efb-4cc4-9a6c-d22023ddb0b0" name="Default Changelist" comment="" />
+      <created>1624178588807</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1624178588807</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

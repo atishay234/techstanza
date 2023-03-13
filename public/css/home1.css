@@ -1,0 +1,127 @@
+.innerFeature {
+  background-color: #f0efeb;
+  height: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.anchorFeature {
+  text-decoration: none;
+  color: black;
+  border: 1px solid lightgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+}
+.anchorFeature:hover {
+  color: black;
+  background-color: #ddbea9;
+  transform: perspective(800px) translateZ(100px);
+  transition: all 0.1s ease-in;
+}
+.goaround {
+  width: 98%;
+  margin-top: 50px;
+  /* margin-left: 20px; */
+  /* margin-right: 20px; */
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+}
+.goaroundRight {
+  width: 50%;
+  border-radius: 20px;
+  border: 1px solid lightgray;
+}
+
+.newsletter {
+  width: 100%;
+  /* padding: 10px; */
+  /* background-color: lightblue; */
+  border-radius: 20px;
+  background-image: url("https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-03.jpg");
+}
+.newsletter-message {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+.newsletter-innermessage {
+  margin: 0;
+  padding: 20px;
+  font-size: large;
+  display: block;
+  font-weight: 900;
+}
+.newsletter-inputs {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  /* background-color: lime; */
+  margin-top: 0%;
+  justify-content: center;
+}
+.custom-form-control {
+  width: 50%;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.custom-ico {
+  padding: 20px;
+  font-size: 50px;
+}
+.feature-division {
+  background-color: #0a1128;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: wrap;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+@media screen and (max-width: 890px) {
+  .innerFeature {
+    padding: 20px 0px 20px 0px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .budget {
+    width: 100%;
+    margin: 4px;
+  }
+  .goaround {
+    flex-wrap: wrap;
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+  .goaroundRight {
+    width: 100%;
+    margin: 20px 4px 4px 4px;
+  }
+  .innerFeature {
+    font-size: smaller;
+  }
+  .newsletter {
+    width: 95%;
+    margin: 10px;
+    font-size: smaller;
+  }
+  .newsletter-innermessage {
+    padding: 0;
+  }
+  .custom-ico {
+    padding: 5px;
+  }
+  .feature-message {
+    font-size: 15px;
+  }
+}

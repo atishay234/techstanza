@@ -1,0 +1,684 @@
+<% layout("layouts/boilerplate")%>
+  <link rel="stylesheet" href="/css/contentPageStyles.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=KoHo:ital,wght@1,600&display=swap" rel="stylesheet">
+  <section class="outer">
+
+
+    <section class="inner">
+      <div class="image-section">
+        <div class="images-inner">
+          <img src="<%=mobile.image%>" alt="">
+          <img
+            src="https://media.wired.com/photos/5f401ecca25385db776c0c46/master/pass/Gear-How-to-Apple-ios-13-home-screen-iphone-xs-06032019_big_large_2x.jpg"
+            alt="">
+          <img src="https://fdn.gsmarena.com/imgroot/reviews/20/apple-iphone-12-mini/-728x314/header-thumb1.jpg" alt="">
+          <img
+            src="https://www.cnet.com/a/img/Fhuj488gVEsSRvefoqdhwzkLuYU=/1200x675/2020/10/28/694577a6-e451-4e49-90c3-8507a356029a/apple-iphone-12-9965.jpg"
+            alt="">
+          <img
+            src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-se-family-select-2020?wid=882&amp;hei=1058&amp;fmt=jpeg&amp;qlt=80&amp;.v=1586794486444"
+            alt="">
+        </div>
+
+        <div class="image-div">
+          <img src="<%=mobile.image%>" alt="" class="mobile-image">
+          <a href="/compare/?mobile=<%=mobile.id%>" class="compare">Compare <i
+              class="fas fa-external-link-square-alt"></i></a>
+
+        </div>
+      </div>
+      <div class="content-div">
+
+        <div class="inner-content">
+          <!-- <div class="share-button">
+            <span>share<i class="fas fa-share" style="margin-left: 5px;"></i></span>
+            <textarea id="share" style="display: none;" cols="30" rows="10"></textarea>
+          </div> -->
+          <div class="mobile-name">
+            <span class="name">
+              <%=mobile.name%>
+            </span>
+
+            <div class="launchdate">
+              Launched <strong> jan 14,2021</strong>
+
+            </div>
+            <span class="price">Launch Price &#8377;<%=mobile.price%></span>
+          </div>
+          <div class="content">
+            <div class="feature">
+
+              <div class="table">
+                <ul type="none" class="each-feature sunflower">
+                  <li class="first"><i class="fa fa-tv" style="color:darkorange"></i> </li>
+                  <li><%=mobile.Display.category%></li>
+                  <li><%=mobile.Display.size%>inches</li>
+                  <li><%=mobile.Display.resolution%></li>
+                  <li><%=mobile.Display.GPU%></li>
+                </ul>
+                <ul type="none" class="each-feature sunflower">
+                  <li class="first"><i class="fas fa-camera" style="color: darkblue;"></i></li>
+                  <li><%=mobile.mainCamera.noOfCameras%> sensors(main)</li>
+                  <li><%= mobile.frontCamera.noOfCameras%> sensors(front) </li>
+                  <li>lorem</li>
+                  <li>lorem</li>
+                </ul>
+                <ul type="none" class="each-feature sunflower">
+                  <li class="first"><i class="fas fa-battery-three-quarters" style="color: darkslategrey;"></i> </li>
+                  <li><%=mobile.BatteryCapacity%> mAh</li>
+                  <!-- <li>lorem</li>
+                  <li>lorem</li>
+                  <li>lorem</li> -->
+                </ul>
+                <ul class="each-feature sunflower" type="none">
+                  <li class="first"><i class="fas fa-microchip" style="color: darkviolet;"></i></li>
+                  <li><%=mobile.processor.category%></li>
+                  <li><%=mobile.processor.Core%> core</li>
+                  <li><%=mobile.Display.GPU%></li>
+                  <li>Android <%=mobile.processor.operatingSystem%></li>
+                </ul>
+              </div>
+
+            </div>
+            <div class="ratings">
+             <div class="rating">
+               <span>7</span>
+               
+             </div>
+             <div class="rating">
+               <span>7</span>
+               
+             </div>
+             <div class="rating">
+               <span>7</span>
+               
+             </div>
+             <div class="rating">
+               <span>7</span>
+               
+             </div>
+
+            </div>
+
+
+
+            <div class="opinion">
+
+              <div class="opinion-div">
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio asperiores quod quasi facilis
+                  nesciunt, perspiciatis suscipit nisi est explicabo tenetur possimus. Doloribus, voluptate expedita.
+                  Aliquid? </p>
+              </div>
+
+            </div>
+
+
+
+
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+
+    <section class="review">
+      <div class="review-inner">
+        <h2 style="text-align: center;">WELCOME TO THE REVIEW ZONE</h2>
+        <div class="display each-review">
+          <!-- <div class="image-review" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="300">
+            <i class="fa fa-tv"></i>
+          </div> -->
+          <div class="background">
+
+          </div>
+          <div class="review-content">
+            <!-- <div class="water">
+
+               <p>
+                 Camera
+               </p>
+            </div> -->
+            <div class="content1">
+
+              <p class="note">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum ipsam, illo aut quas molestias
+                corrupti asperiores possimus eius ducimus explicabo earum maiores obcaecati modi sed, dolor deserunt
+                placeat molestiae. Dolores?
+              </p>
+            </div>
+            <div class="content1">
+
+
+              <ul class="interesting" type="none">
+                <li> Lorem ipsum, dolor sit amet consectetur adipisicing</li>
+                <li> Lorem ipsum, dolor sit amet consectetur adipisicing</li>
+                <li> Lorem ipsum, dolor sit amet consectetur adipisicing</li>
+                
+
+              </ul>
+
+
+            </div>
+
+          </div>
+        </div>
+        <div class="processor each-review">
+          <!-- <div class="image-review" data-aos="zoom-in-left" data-aos-duration="1000" data-aos-offset="300">
+            <i class="fa fa-microchip" style="color: black;"></i>
+          </div> -->
+          <div class="background">
+
+          </div>
+          <div class="review-content">
+            <div class="content1">
+
+              <p class="note">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum ipsam, illo aut quas molestias
+                corrupti asperiores possimus eius ducimus explicabo earum maiores obcaecati modi sed, dolor deserunt
+                placeat molestiae. Dolores?
+              </p>
+            </div>
+            <div class="content1">
+
+
+              <ul class="interesting" type="none">
+                <li> Lorem ipsum, dolor sit amet consectetur adipisicing</li>
+                <li> Lorem ipsum, dolor sit amet consectetur adipisicing</li>
+                <li> Lorem ipsum, dolor sit amet consectetur adipisicing</li>
+                
+
+              </ul>
+
+
+            </div>
+
+          </div>
+        </div>
+        <div class="camera each-review">
+          <!-- <div class="image-review" data-aos="slide-up" data-aos-duration="1000" data-aos-offset="300">
+            <i class="fa fa-camera"></i>
+          </div> -->
+          <div class="background">
+
+          </div>
+          <div class="review-content">
+            <div class="content1">
+
+              <p class="note">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum ipsam, illo aut quas molestias
+                corrupti asperiores possimus eius ducimus explicabo earum maiores obcaecati modi sed, dolor deserunt
+                placeat molestiae. Dolores?
+              </p>
+            </div>
+            <div class="content1">
+
+
+
+              <ul class="interesting" type="none">
+                <li> Lorem ipsum, dolor sit amet consectetur adipisicing</li>
+                <li> Lorem ipsum, dolor sit amet consectetur adipisicing</li>
+                <li> Lorem ipsum, dolor sit amet consectetur adipisicing</li>
+                
+
+              </ul>
+
+
+            </div>
+
+          </div>
+        </div>
+        <div class="other-things each-review">
+          <!-- <div class="image-review" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-offset="300">
+            <i class="fas fa-tape"></i>
+            <i class="fas fa-play"></i>
+            <i class="fas fa-music"></i>
+
+          </div> -->
+          <div class="background">
+
+          </div>
+
+          <div class="review-content">
+            <div class="content1">
+
+              <p class="note">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum ipsam, illo aut quas molestias
+                corrupti asperiores possimus eius ducimus explicabo earum maiores obcaecati modi sed, dolor deserunt
+                placeat molestiae. Dolores?
+              </p>
+            </div>
+            <div class="content1">
+
+
+              <ul class="interesting" type="none">
+                <li> Lorem ipsum, dolor sit amet consectetur adipisicing</li>
+                <li> Lorem ipsum, dolor sit amet consectetur adipisicing</li>
+                <li> Lorem ipsum, dolor sit amet consectetur adipisicing</li>
+                
+
+              </ul>
+
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+    </section>
+
+
+
+    <section id="detailed">
+      <div style="width: 80%;display: flex;flex-direction:column;height: 100%;">
+        <h4 style="width: 100%;" class="detail-message"><strong>Detailed Description</strong></h4>
+
+
+        <div class="visible-review">
+          <div class="each-table">
+            <h5>Common Specification</h5>
+            <table class="">
+              <tr>
+                <td class='left'>Name</td>
+                <td class='right'>
+                  <%= mobile.name %>
+                </td>
+              </tr>
+              <tr>
+                <td class='left'>Price</td>
+                <td class='right'>
+                  <%= mobile.price %>
+                </td>
+              </tr>
+              <tr>
+                <td class='left'>Brand</td>
+                <td class='right'>
+                  <%= mobile.brand %>
+                </td>
+              </tr>
+              <tr>
+                <td class='left'>Launch Date</td>
+                <td class='right'>
+                  <%= mobile.launchDate %>
+                </td>
+              </tr>
+            </table>
+          </div>
+
+
+
+          <div class="each-table">
+            <h5>Main Camera</h5>
+            <table class="">
+              <tr>
+                <td class='left'>Number of Cameras</td>
+                <td class='right'>
+                  <%= mobile.mainCamera.noOfCameras %>
+                </td>
+              </tr>
+              <tr>
+                <td class='left'>Pixels</td>
+                <% for(let i=0; i<mobile.mainCamera.pixels.length; i++) { %>
+                  <td class='right'>
+                    <%= mobile.mainCamera.pixels[i].pixel %>
+                  </td>
+                  <% } %>
+              </tr>
+              <tr>
+                <td class='left'>Picture Quality</td>
+                <% for(let i=0; i<mobile.mainCamera.pixels.length; i++) { %>
+                  <td class='right'>
+                    <%= mobile.mainCamera.pixels[i].description %>
+                  </td>
+                  <% } %>
+              </tr>
+            </table>
+          </div>
+
+
+          <div class="each-table">
+            <h5>Front Camera</h5>
+            <table class="">
+              <tr>
+                <td class='left'>Number of Cameras</td>
+                <td class='right'>
+                  <%= mobile.frontCamera.noOfCameras %>
+                </td>
+              </tr>
+              <tr>
+                <td class='left'>Pixels</td>
+                <% for(let i=0; i<mobile.frontCamera.pixels.length; i++) { %>
+                  <td class='right'>
+                    <%= mobile.frontCamera.pixels[i].pixel %>
+                  </td>
+                  <% } %>
+              </tr>
+              <tr>
+                <td class='left'>Picture Quality</td>
+                <% for(let i=0; i<mobile.frontCamera.pixels.length; i++) { %>
+                  <td class='right'>
+                    <%= mobile.frontCamera.pixels[i].description %>
+                  </td>
+                  <% } %>
+              </tr>
+
+            </table>
+          </div>
+        </div>
+
+        <p style="width:100%" class="more-button">
+          <span class="btn btn-primary moreButton" onclick="expand();">more</span>
+        </p>
+        <div class="more">
+          <div class="each-table">
+            <h5>Display</h5>
+            <table class="">
+              <tr>
+                <td class='left'>Size</td>
+                <td class='right'>
+                  <%= mobile.Display.size %>
+                </td>
+              </tr>
+              <tr>
+                <td class='left'>Resolution</td>
+                <td class='right'>
+                  <%= mobile.Display.resolution %>
+                </td>
+              </tr>
+              <tr>
+                <td class='left'>GPU</td>
+                <td class='right'>
+                  <%= mobile.Display.category %>
+                </td>
+              </tr>
+              <tr>
+                <td class='left'>other</td>
+                <td class='right'>
+                  <%= mobile.Display.other %>
+                </td>
+              </tr>
+            </table>
+          </div>
+
+
+
+          <div class="each-table">
+            <h5>Processor</h5>
+            <table class="">
+              <tr>
+                <td class='left'>Operating System</td>
+                <td class='right'>
+                  <%= mobile.processor.operatingSystem %>
+                </td>
+              </tr>
+              <tr>
+                <td class='left'>Category</td>
+                <td class='right'>
+                  <%= mobile.processor.category %>
+                </td>
+              </tr>
+              <tr>
+                <td class='left'>Core</td>
+                <td class='right'>
+                  <%= mobile.processor.Core %>
+                </td>
+              </tr>
+              <tr>
+                <td class='left'>Clock Speed</td>
+                <td class='right'>
+                  <%= mobile.processor.clockSpeed %>
+                </td>
+              </tr>
+            </table>
+          </div>
+
+
+          <div class="each-table">
+            <h5>Memory</h5>
+            <table class="">
+              <tr>
+                <td class='left'>Internal Storage</td>
+                <td class='right'>
+                  <%= mobile.memory.internalStorage %>
+                </td>
+              </tr>
+              <tr>
+                <td class='left'>Ram</td>
+                <td class='right'>
+                  <%= mobile.memory.ram %>
+                </td>
+              </tr>
+              <tr>
+                <td class='left'>Expandable Memory</td>
+                <td class='right'>
+                  <%= mobile.memory.expandableStorage %>
+                </td>
+              </tr>
+            </table>
+          </div>
+
+
+
+          <div class="each-table">
+            <h5>Network</h5>
+            <table class="">
+              <tr>
+                <td class='left'>Category</td>
+                <td class='right'>
+                  <%= mobile.network.category %>
+                </td>
+              </tr>
+              <tr>
+                <td class='left'>Bluetooth Version</td>
+                <td class='right'>
+                  <%= mobile.network.bluetoothVersion %>
+                </td>
+              </tr>
+              <tr>
+                <td class='left'>NFC</td>
+                <td class='right'>
+                  <%= mobile.network.nfc %>
+                </td>
+              </tr>
+              <tr>
+                <td class='left'>Infrared</td>
+                <td class='right'>
+                  <%= mobile.network.infrared %>
+                </td>
+              </tr>
+              <tr>
+                <td class='left'>Audio Jack</td>
+                <td class='right'>
+                  <%= mobile.network.audioJack %>
+                </td>
+              </tr>
+            </table>
+          </div>
+
+
+          <div class="each-table">
+            <h5>Dimensions</h5>
+            <table>
+              <tr>
+                <td class='left'>Width</td>
+                <td class='right'>
+                  <%= mobile.Dimensions.width %>
+                </td>
+              </tr>
+              <tr>
+                <td class='left'>Height</td>
+                <td class='right'>
+                  <%= mobile.Dimensions.height %>
+                </td>
+              </tr>
+              <tr>
+                <td class='left'>Weight</td>
+                <td class='right'>
+                  <%= mobile.Dimensions.weight %>
+                </td>
+              </tr>
+            </table>
+          </div>
+
+
+          <div class="each-table">
+            <h5>Other Specification</h5>
+            <table>
+              <tr>
+                <td class='left'>Battery</td>
+                <td class='right'>
+                  <%= mobile.BatteryCapacity %>
+                </td>
+              </tr>
+              <tr>
+                <td class='left'>Warranty Period</td>
+                <td class='right'>
+                  <%= mobile.warrantyPeriod %>
+                </td>
+              </tr>
+              <tr>
+                <td class='left'>User Interface</td>
+                <td class='right'>
+                  <%= mobile.userInterface %>
+                </td>
+              </tr>
+              <tr>
+                <td class='left'>Box</td>
+                <td class='right'>
+                  <%= mobile.box %>
+                </td>
+              </tr>
+              <tr>
+                <td class='left'>Body Type</td>
+                <td class='right'>
+                  <%= mobile.bodyType %>
+                </td>
+              </tr>
+              <tr>
+                <td class='left'>Review</td>
+                <td class='right'>
+                  <%= mobile.review %>
+                </td>
+              </tr>
+              <tr>
+                <td class='left'>Our Suggestion</td>
+                <td class='right'>
+                  <%= mobile.ourOpinion %>
+                </td>
+              </tr>
+              <tr>
+                <td class='left'>Sound</td>
+                <td class='right'>
+                  <%= mobile.sound %>
+                </td>
+              </tr>
+              <tr>
+                <td class='left'>Sim Type</td>
+                <td class='right'>
+                  <%= mobile.simType %>
+                </td>
+              </tr>
+              <tr>
+                <td class='left'>Colors</td>
+                <td class='right'>
+                  <%= mobile.colorVariants %>
+                </td>
+              </tr>
+            </table>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+
+
+     <section class="similar-section">
+
+      <h2>Similar Like This</h2>
+      <div class="similar-div">
+        <%for(let each of similar){%>
+         
+            <div class="custom-card">
+              <img src="<%=each.image%>" alt="mobile">
+              <div class="custom-card-body">
+                <span class="similar-name">
+                  <%=each.name%>
+                </span>
+                <a href="/<%=each._id%>" class="anchors">view</a>
+                <a href="/compare/?mobile=<%=each.id%>" class="anchors">compare</a>
+
+              </div>
+
+            </div>
+
+          
+
+          <%}%>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </section>
+
+
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.1.0/progressbar.min.js"
+  integrity="sha512-EZhmSl/hiKyEHklogkakFnSYa5mWsLmTC4ZfvVzhqYNLPbXKAXsjUYRf2O9OlzQN33H0xBVfGSEIUeqt9astHQ=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+  <script src="/javascript/content.js"></script>
+  <script>
+
+
+
+
+
+
+  </script>

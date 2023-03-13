@@ -1,0 +1,38 @@
+.push div {
+  display: none;
+  background-color: white;
+}
+.push > span {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 15px;
+  align-items: center;
+  cursor: pointer;
+  border-bottom: 1px solid darkgray;
+}
+.push:last-of-type > span {
+  border: none;
+}
+.showpush {
+  display: block;
+}
+.push span span {
+  font-size: 20px;
+}
+
+.animation-block {
+  display: block !important;
+  animation: blockify 0.5s ease;
+  height: fit-content;
+}
+
+@keyframes blockify {
+  from {
+    opacity: 0;
+    height: 0px;
+  }
+  to {
+    opacity: 1;
+    height: 200px;
+  }
+}

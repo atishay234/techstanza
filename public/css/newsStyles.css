@@ -1,0 +1,247 @@
+body {
+  overflow-x: hidden;
+}
+.back {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  margin-bottom: 50px;
+}
+.message {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: xx-large;
+  font-weight: 700;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-left: 50px;
+}
+.brand-name {
+  z-index: 3;
+}
+.trending {
+  position: absolute;
+  top: 50%;
+  left: 1%;
+}
+.trending .news-card {
+  width: 30%;
+  height: 400px;
+  background-color: lightyellow;
+  z-index: 3;
+}
+.animate {
+  display: block;
+  width: 100%;
+}
+.animate:nth-of-type(2) {
+  font-weight: 300;
+}
+.image-div {
+  width: 50%;
+  height: 100%;
+}
+.image-div img {
+  width: 100%;
+  height: 100vh;
+  transform: translateX(100%);
+  opacity: 0;
+}
+.news-section {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.news-card {
+  width: 23%;
+  height: fit-content;
+  border-radius: 0px 10px 10px 10px;
+  display: flex;
+  box-shadow: 0px 0px 10px lightgray;
+  flex-direction: column;
+  margin-top: 100px;
+  margin-right: 40px;
+  padding-bottom: 20px;
+}
+
+.brand-name {
+  position: absolute;
+  transform: translateY(-90%);
+  background-color: #4895ef;
+  border-radius: 5px;
+  padding: 5px;
+  z-index: -1;
+  border-radius: -10px;
+  font-weight: 500;
+  color: black;
+}
+.date-added {
+  width: fit-content;
+  padding: 10px;
+  height: fit-content;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 5px;
+  font-weight: bolder;
+  background-color: lightgray;
+}
+.share-icon {
+  position: absolute;
+  color: black;
+  background-color: yellow;
+  width: 2%;
+  transform: translate(1000%, -110%);
+}
+.share-icon a {
+  color: black;
+}
+.news-image {
+  width: 100%;
+  height: 40%;
+  position: relative;
+  display: flex;
+}
+.news-image img {
+  width: 100%;
+  height: 200px;
+  border-top-right-radius: 10px;
+}
+.news-heading {
+  padding: 10px;
+  padding-top: 20px;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+  font-weight: 400;
+}
+.news-heading p {
+  margin: 0;
+}
+
+.read-more a {
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  padding: 5px;
+  margin-top: 20px;
+  margin: 5px;
+  color: blue;
+  border-radius: 5px;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+.read-more a:hover {
+  color: #03045e;
+  transition: 0.5s;
+}
+.icons {
+  width: 100%;
+  height: 7%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-left: auto;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+.buttons span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: inline;
+}
+.icons i {
+  font-size: 20px;
+  color: black;
+  /* margin-right: 20px; */
+}
+.icons i:hover {
+  color: darkblue;
+  cursor: pointer;
+}
+.buttons {
+  background-color: white;
+  border: none;
+  /* width: 100px; */
+}
+.comments-div {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+  /* top: 0; */
+  /* top: 50%; */
+  left: 0;
+  justify-content: center;
+  align-items: center;
+}
+.comments {
+  width: 40vw;
+  height: 50%;
+  border: 1px solid lightgray;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+.close-btn {
+  display: inline-block;
+  font-size: xx-large;
+  width: fit-content;
+  margin-right: 10px;
+  margin-left: auto;
+  color: darkgray;
+  text-align: end;
+  cursor: pointer;
+  font-weight: bold;
+}
+.close-btn:hover {
+  color: black;
+}
+.comment-title {
+  font-weight: 900;
+  font-size: xx-large;
+  display: inline-block;
+  margin: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+  .news-card {
+    width: 40%;
+    margin: 0;
+    margin-bottom: 40px;
+  }
+
+  .image-div {
+    width: 100%;
+  }
+  .message {
+    position: absolute;
+    z-index: 2;
+    top: 20%;
+    height: 20%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .news-card {
+    width: 80%;
+    margin: 0;
+    align-self: center;
+    margin-bottom: 40px;
+  }
+  .news-section {
+    justify-content: center;
+
+    flex-direction: column;
+  }
+
+  .comments {
+    width: 90%;
+  }
+}

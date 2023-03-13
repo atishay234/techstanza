@@ -1,0 +1,16 @@
+<%layout("/layouts/boilerplate")%>
+
+
+<h3 class="container-fluid">The Best Deals we bring for you</h3>
+
+<div class="container-fluid card-group">
+<% foundPhones.forEach(function(phone){ %>
+  <div class="card">
+    <img src="<%= phone.image %>" class="card-img-top" alt="..." style="height: 200px; width: 150;">
+    <div class="card-body">
+      <h5 class="card-title"><%= phone.name %></h5>
+      <a href="/<%=phone._id%>"><button type="button" class="btn btn-outline-dark">View</button></a>
+    </div>
+  </div>
+<% }); %>
+</div>

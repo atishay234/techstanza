@@ -1,0 +1,233 @@
+<%layout("layouts/boilerplate")%>
+  <link rel="stylesheet" href="/css/searchStyles.css">
+
+
+  <%if(result.length==0){%>
+    <div class="message">
+       <h2 class="center">  <span style="color:#6C63FF"> OOOPS!!! </span> Nothing Found Against Your Search Result</h2>
+       <img src="notfound.svg" alt="">
+    </div>
+   
+    
+
+      <section class="recent">
+
+        <h5>Take a Look At the Recently launched
+        </h5>
+
+        <%for(mobile of allMobiles){%>
+
+          <div class="card-c">
+            <span style="display: none;">
+              <%=mobile._id%>
+            </span>
+
+            <div class="image-div">
+              <div class="image">
+                <img src="<%=mobile.image%>" alt="...">
+                
+
+                
+
+
+              </div>
+              <div class="variants">
+                <span style="width: fit-content;font-size: small;margin-left: 20%;height: 100%;margin-top: 2px;font-weight: 500;">color variants</span>
+                <div class="color">
+                  <span></span>
+                  <span>blue</span>
+                </div>
+                <div class="color">
+                  <span></span>
+                  <span>red</span>
+                </div>
+                <div class="color">
+                  <span></span>
+                  <span>white</span>
+                </div>
+              </div>
+
+
+
+            </div>
+            <div class="c-text">
+
+              <div class="name-rating">
+                <div class="name">
+                  <h5 class="c-title">
+                    <%=mobile.name%>
+
+                  </h5>
+                  <h6 class="c-date">
+                    
+                  </h6>
+                </div>
+                <div class="ratings">
+
+                  <div class="rating">
+                    <span>7</span>
+                  </div>
+
+                </div>
+
+
+              </div>
+              
+
+
+              <div class="c-price">
+
+
+
+
+                <div class="flipkart">
+                  <img src="flipkart_logo.svg" alt="">
+                  <span>&#8377;<%=mobile.price%></span>
+                  <a href="">
+                    Buy
+                  </a>
+
+                </div>
+                <div class="amazon">
+                  <img src="amazon_logo.svg" alt="">
+                  <span>&#8377;<%=mobile.price%></span>
+                  <a href="">Buy</a>
+
+                </div>
+
+
+              </div>
+              <div class="button-div">
+                <a href="/<%=mobile._id%>">View</a>
+
+                <a href="/compare/?mobile=<%=mobile._id%>">compare</a>
+
+              </div>
+
+
+
+
+
+            </div>
+
+          </div>
+         
+          <%}%>
+      </section>
+
+      <%}%>
+        <%if(result.length!=0){%>
+          <h3 class="result-message">Results Based On Your Search</h1>
+            <h5 class="no-message"> <span style="color: blue;"><%=result.length%></span>  Results from <span style="color: blue;font-weight: 500;">"<%=search%>" </span></h5>
+            <%}%>
+
+
+              <section class="result">
+
+                <%for(let mobile of result){%>
+
+                  <div class="card-c">
+                    <span style="display: none;">
+                      <%=mobile._id%>
+                    </span>
+
+                    <div class="image-div">
+                      <div class="image">
+                        <img src="<%=mobile.image%>" alt="...">
+                        
+  
+                        
+
+
+                      </div>
+                      <div class="variants">
+                        <span style="width: fit-content;font-size: small;margin: 0;height: 100%;margin-top: 2px;">color variants</span
+                          style="width: fit-content;font-size: small;margin: 0;height: 100%;margin-top: 2px;">
+                        <div class="color">
+                          <span></span>
+                          <span>blue</span>
+                        </div>
+                        <div class="color">
+                          <span></span>
+                          <span>red</span>
+                        </div>
+                        <div class="color">
+                          <span></span>
+                          <span>white</span>
+                        </div>
+                      </div>
+  
+
+
+                    </div>
+                    <div class="c-text">
+
+                      <div class="name-rating">
+                        <div class="name">
+                          <h5 class="c-title">
+                            <%=mobile.name%>
+
+                          </h5>
+                          <h6 class="c-date">
+                            launched:<%=mobile.launchDate.getDay() %>/<%=mobile.launchDate.getMonth()%>/<%=
+                                  mobile.launchDate.getYear() %>
+                          </h6>
+                        </div>
+                        <div class="ratings">
+
+                          <div class="rating">
+                            <span>7</span>
+                          </div>
+
+                        </div>
+
+
+                      </div>
+                      
+
+
+                      <div class="c-price">
+
+
+
+
+                        <div class="flipkart">
+                          <img src="flipkart_logo.svg" alt="">
+                          <span>&#8377;<%=mobile.price%></span>
+                          <a href="">
+                            Buy
+                          </a>
+
+                        </div>
+                        <div class="amazon">
+                          <img src="amazon_logo.svg" alt="">
+                          <span>&#8377;<%=mobile.price%></span>
+                          <a href="">Buy</a>
+
+                        </div>
+
+
+                      </div>
+                      <div class="button-div">
+                        <a href="/<%=mobile._id%>">View</a>
+
+                        <a href="/compare/?mobile=<%=mobile._id%>">compare</a>
+
+                      </div>
+
+
+
+
+
+                    </div>
+
+                  </div>
+
+
+
+                  <%}%>
+              </section>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.1.0/progressbar.min.js"
+                integrity="sha512-EZhmSl/hiKyEHklogkakFnSYa5mWsLmTC4ZfvVzhqYNLPbXKAXsjUYRf2O9OlzQN33H0xBVfGSEIUeqt9astHQ=="
+                crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+              <script src="/javascript/search.js"></script>

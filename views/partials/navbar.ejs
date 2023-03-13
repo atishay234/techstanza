@@ -1,0 +1,833 @@
+<link rel="stylesheet" href="/css/navbarStyles.css">
+
+
+
+<style>
+
+
+
+
+
+</style>
+
+
+
+<div class="modal fade c-modal" id="exampleModalToggle" tabindex="-1" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Log In</h5>
+        <div class="spinner-border text-primary ml-5 login-spinner" role="status">
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      
+      </div>
+      <div class="modal-body custom">
+
+        <div class="alert alert-danger alert-dismissible fade show text-center w-80 login-error m-auto" role="alert"
+          style="margin: 0;padding: 10px;">
+          <strong class="error-message login-message"></strong>
+          <button type="button" class="p-1" data-bs-dismiss="alert" aria-label="Close"
+            style="margin-left: auto;background-color: transparent;border: none;height: fit-content;"><i
+              class="fas fa-times" style="font-size: larger;"></i></button>
+        </div>
+
+        <div class="login-local">
+          <form action="/login" method="POST" class="login-form">
+            <div class="mb-3">
+
+              <input class="form-control" type="text" id="username" name="username" placeholder="username" required
+                autocomplete="on">
+
+            </div>
+            <div class="mb-3">
+              <input class="form-control" type="password" id="password" name="password" required placeholder="password"
+                autocomplete="on">
+
+            </div>
+            <button class="btn btn-success">Log In</button>
+
+
+
+
+          </form>
+          <div class="recovery-register">
+            <button class="r-b-inLogin" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"
+              data-bs-dismiss="modal">Register</button> 
+              <button class="r-b-inLogin" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal"
+              data-bs-dismiss="modal">Forgot Password</button>
+            
+          </div>
+        </div>
+        <div class="login-diff">
+
+          <div class="google">
+            <a href="/auth/google">
+              <div class="google-icon">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1024px-Google_%22G%22_Logo.svg.png"
+                  alt="">
+
+              </div>
+              <span>Sign In With Google</span>
+            </a>
+          </div>
+
+
+          <div class="fb-login-button" data-width="" data-size="large" data-button-type="login_with"
+            data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+<div class="modal fade c-modal" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+  tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalToggleLabel2">Register</h5>
+        <div class="spinner-border text-primary ml-5 register-spinner" role="status">
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body custom">
+        <div class="alert alert-danger alert-dismissible fade show text-center w-80 register-error m-auto" role="alert"
+          style="margin: 0;">
+          <strong class="error-message register-message"></strong>
+          <button type="button" class="p-1" data-bs-dismiss="alert" aria-label="Close"
+            style="margin-left: auto;background-color: transparent;border: none;height: fit-content"><i
+              class="fas fa-times" style="font-size: larger;"></i></button>
+        </div>
+        <div class="login-local">
+          <form action="/auth/register" method="POST" class="register-form">
+            <div class="mb-3">
+
+              <input class="form-control" type="text" id="username1" name="username" required placeholder="username"
+                autocomplete="on">
+
+            </div>
+            <div class="mb-3">
+
+              <input class="form-control" type="email" id="email1" name="email" required placeholder="email"
+                autocomplete="on">
+
+            </div>
+            <div class="mb-3">
+
+              <input class="form-control" type="password" id="password1" name="password" required placeholder="password"
+                autocomplete="on">
+
+            </div>
+
+            <button class="btn btn-success register-button">Register</button>
+          </form>
+
+
+          <button class="" style="background-color: white;border: none;color: tomato;"
+            data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to Log In</button>
+        </div>
+        <div class="login-diff">
+
+          <div class="google">
+            <a href="/google">
+              <div class="google-icon">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1024px-Google_%22G%22_Logo.svg.png"
+                  alt="">
+
+              </div>
+              <span>Sign In With Google</span>
+            </a>
+          </div>
+
+
+          <div class="fb-login-button" data-width="" data-size="large" data-button-type="login_with"
+            data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div>
+
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade c-modal" id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel3"
+  tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalToggleLabel2">forgot password</h5>
+        <div class="spinner-border text-primary ml-5 recover-spinner" role="status">
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body custom">
+        <div class="alert alert-danger alert-dismissible fade show text-center w-80 recover-error m-auto" role="alert"
+          style="margin: 0;">
+          <strong class="error-message recover-error-message"></strong>
+          <button type="button" class="p-1" data-bs-dismiss="alert" aria-label="Close"
+            style="margin-left: auto;background-color: transparent;border: none;height: fit-content"><i
+              class="fas fa-times" style="font-size: larger;"></i></button>
+        </div>
+        <div class="alert alert-success alert-dismissible fade show text-center w-80 recover-success m-auto" role="alert"
+          style="margin: 0;">
+          <strong class="error-message recover-success-message"></strong>
+          <button type="button" class="p-1" data-bs-dismiss="alert" aria-label="Close"
+            style="margin-left: auto;background-color: transparent;border: none;height: fit-content"><i
+              class="fas fa-times" style="font-size: larger;"></i></button>
+        </div>
+        <div class="recover">
+          <form action="/auth/reset-password" method="POST" class="recover-form">
+            <div>
+              <label for="email-recover">Email</label>
+            <input type="text" id="email-recover" name="email">
+            </div>
+             <p>
+               OR
+             </p>
+            <div> 
+              <label for="username-recover">username</label>
+            <input type="text" id="username-recover" name="username">
+
+            </div>
+           
+            <button>Reset Password</button>
+
+          </form>
+          <div>
+            <button class="" style="background-color: white;border: none;color: tomato;"
+            data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to Log In</button>
+            <button class="r-b-inLogin" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"
+              data-bs-dismiss="modal">Register</button>
+          </div>
+
+        </div>       
+ 
+
+          
+      
+      </div>
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+
+
+
+<div class="modal fade c-search-modal" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content c-modal-content">
+      <div class="modal-header" style="border: none;">
+        <button type="button" class="btn" style="color: white;margin-left: auto;font-size: x-large;"
+          data-bs-dismiss="modal" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form action="/search" method="POST">
+          <input type="text" name="search" placeholder="Search brand,mobile,etc." id="modal-search" autocomplete="on">
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<nav class="nav">
+  <button class="custom-btn" type="button" onclick="openNav()"><i class="fas fa-bars"></i></button>
+  <a href="/" class="logo-div">
+    <img src="/logo.png" alt="">
+  </a>
+
+  <div class="navigation">
+    <ul>
+      <li class="dropdown">
+        <div class="dropbtn">Compare<i class="fas fa-chevron-down"></i></div>
+        <div class="dropdown-content">
+          <div class="arrow"></div>
+          <a href="#" class="dropdown1">
+            <div class="navbar-comp">
+              <div class="navbar-comp-image">
+                <img src="https://images.samsung.com/my/smartphones/galaxy-s21/buy/s21_family_kv_mo_img.jpg" alt="">
+              </div>
+              <div class="comp-text">
+                <span>samsung Galaxy s21 ultra</span>
+
+              </div>
+
+
+            </div>
+            <div class="vs">
+              <span>V/S</span>
+
+            </div>
+            <div class="navbar-comp">
+              <div class="navbar-comp-image">
+                <img
+                  src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-12-pro-family-hero?wid=940&amp;hei=1112&amp;fmt=jpeg&amp;qlt=80&amp;.v=1604021663000"
+                  alt="">
+              </div>
+              <div class="comp-text">
+                <span>iphone 12 pro max</span>
+
+              </div>
+
+
+            </div>
+
+
+          </a>
+          <a href="#" class="dropdown1">
+            <div class="navbar-comp">
+              <div class="navbar-comp-image">
+                <img src="https://i01.appmifile.com/webfile/globalimg/products/pc/redmi-note-10-pro/specs-header.png"
+                  alt="">
+              </div>
+              <div class="comp-text">
+                <span>Redmi note 10 pro</span>
+
+              </div>
+
+
+            </div>
+            <div class="vs">
+              <span>V/S</span>
+
+            </div>
+            <div class="navbar-comp">
+              <div class="navbar-comp-image">
+                <img src="https://image05.realme.net/general/20210319/1616130489804.png" alt="">
+              </div>
+              <div class="comp-text">
+                <span>Realme 8 pro</span>
+
+              </div>
+
+
+            </div>
+
+
+
+          </a>
+          <a href="#" style="margin-bottom: 10px;" class="dropdown1">
+            <div class="navbar-comp">
+              <div class="navbar-comp-image">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/71kv86NHSFL._AC_SX679_.jpg" alt="">
+              </div>
+              <div class="comp-text">
+                <span>poco x3</span>
+
+              </div>
+
+
+            </div>
+            <div class="vs">
+              <span>V/S</span>
+
+            </div>
+            <div class="navbar-comp">
+              <div class="navbar-comp-image">
+                <img src="https://image05.realme.net/general/20201022/1603381922929.jpg" alt="">
+              </div>
+              <div class="comp-text">
+                <span>realme 7 pro</span>
+
+              </div>
+
+
+            </div>
+
+          </a>
+        </div>
+      </li>
+      <li class="dropdown news">
+        <div class="dropbtn">News<i class="fas fa-chevron-down"></i></div>
+        <div class="dropdown-content">
+          <div class="arrow"></div>
+          <a href="#" class="dropdown1">
+            <div class="news-image-navbar">
+              <div class="on-hover">
+                Click To read more
+              </div>
+              <img src="https://www.91-cdn.com/hub/wp-content/uploads/2021/04/samsung-galaxy-a22-image-featured.jpeg"
+                alt="">
+            </div>
+            <div class="news-heading-navbar">
+              <p>
+                redmi going to launch new phone in their mid range
+              </p>
+              <span class="date">
+                25 Jun
+
+              </span>
+
+            </div>
+
+
+
+
+          </a><a href="#" class="dropdown1">
+            <div class="news-image-navbar">
+              <div class="on-hover">
+                Click To read more
+              </div>
+              <img src="https://www.91-cdn.com/hub/wp-content/uploads/2021/04/samsung-galaxy-a22-image-featured.jpeg"
+                alt="">
+            </div>
+            <div class="news-heading-navbar">
+              <p>
+                redmi going to launch new phone in their mid range
+              </p>
+              <span class="date">
+                25 Jun
+
+              </span>
+
+            </div>
+
+
+
+
+          </a><a href="#" class="dropdown1">
+            <div class="news-image-navbar">
+              <div class="on-hover">
+                Click To read more
+              </div>
+              <img src="https://www.91-cdn.com/hub/wp-content/uploads/2021/04/samsung-galaxy-a22-image-featured.jpeg"
+                alt="">
+            </div>
+            <div class="news-heading-navbar">
+              <p>
+                redmi going to launch new phone in their mid range
+              </p>
+              <span class="date">
+                25 Jun
+
+              </span>
+
+            </div>
+
+
+
+
+          </a><a href="#" class="dropdown1">
+            <div class="news-image-navbar">
+              <div class="on-hover">
+                Click To read more
+              </div>
+              <img src="https://www.91-cdn.com/hub/wp-content/uploads/2021/04/samsung-galaxy-a22-image-featured.jpeg"
+                alt="">
+            </div>
+            <div class="news-heading-navbar">
+              <p>
+                redmi going to launch new phone in their mid range
+              </p>
+              <span class="date">
+                25 Jun
+
+              </span>
+
+            </div>
+
+
+
+
+          </a><a href="#" class="dropdown1">
+            <div class="news-image-navbar">
+              <div class="on-hover">
+                Click To read more
+              </div>
+              <img src="https://www.91-cdn.com/hub/wp-content/uploads/2021/04/samsung-galaxy-a22-image-featured.jpeg"
+                alt="">
+            </div>
+            <div class="news-heading-navbar">
+              <p>
+                redmi going to launch new phone in their mid range
+              </p>
+              <span class="date">
+                25 Jun
+
+              </span>
+
+            </div>
+
+
+
+
+          </a><a href="#" class="dropdown1">
+            <div class="news-image-navbar">
+              <div class="on-hover">
+                Click To read more
+              </div>
+              <img src="https://www.91-cdn.com/hub/wp-content/uploads/2021/04/samsung-galaxy-a22-image-featured.jpeg"
+                alt="">
+            </div>
+            <div class="news-heading-navbar">
+              <p>
+                redmi going to launch new phone in their mid range
+              </p>
+              <span class="date">
+                25 Jun
+
+              </span>
+
+            </div>
+
+
+
+
+          </a><a href="#" class="dropdown1">
+            <div class="news-image-navbar">
+              <div class="on-hover">
+                Click To read more
+              </div>
+              <img src="https://www.91-cdn.com/hub/wp-content/uploads/2021/04/samsung-galaxy-a22-image-featured.jpeg"
+                alt="">
+            </div>
+            <div class="news-heading-navbar">
+              <p>
+                redmi going to launch new phone in their mid range
+              </p>
+              <span class="date">
+                25 Jun
+
+              </span>
+
+            </div>
+
+
+
+
+          </a><a href="#" class="dropdown1">
+            <div class="news-image-navbar">
+              <div class="on-hover">
+                Click To read more
+              </div>
+              <img src="https://www.91-cdn.com/hub/wp-content/uploads/2021/04/samsung-galaxy-a22-image-featured.jpeg"
+                alt="">
+            </div>
+            <div class="news-heading-navbar">
+              <p>
+                redmi going to launch new phone in their mid range
+              </p>
+              <span class="date">
+                25 Jun
+
+              </span>
+
+            </div>
+
+
+
+
+
+          </a>
+
+          <a href="" class="see-more">See more</a>
+
+        </div>
+      </li>
+      <li class="dropdown">
+        <div class="dropbtn">Best Under<i class="fas fa-chevron-down"></i></div>
+        <div class="dropdown-content best-under">
+          <div class="arrow"></div>
+          <a href="/bestPhones?under=10k" class="dropdown1">
+            <div class="dropbtn1">Best under 10k</div>
+          </a>
+          <a href="/bestPhones?under=15k" class="dropdown1">
+            <div class="dropbtn1">Best under 15k</div>
+
+
+          </a>
+          <a href="/bestPhones?under=20k" class="dropdown1">
+            <div class="dropbtn1">Best under 20k</div>
+
+
+          </a>
+          <a href="/bestPhones?under=25k" style="margin-bottom: 10px;" class="dropdown1">
+            <div class="dropbtn1">Best under 25k</div>
+          </a>
+          <a href="bestPhones?under=30k" style="margin-bottom: 10px;" class="dropdown1">
+            <div class="dropbtn1">Best under 30k</div>
+          </a>
+          <a href="/bestPhones?under=40k" style="margin-bottom: 10px;" class="dropdown1">
+            <div class="dropbtn1">Best under 40k</div>
+          </a>
+          <a href="/bestPhones?under=Flagship" style="margin-bottom: 10px;" class="dropdown1">
+            <div class="dropbtn1">Best Flagships</div>
+          </a>
+        </div>
+      </li>
+    </ul>
+
+  </div>
+  <div class="other">
+
+
+
+    <div class="home-nav">
+      <a href="/"><i class="fas fa-home"></i></a>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="search-div">
+      <form action="/search" method="POST">
+        <input type="text" name="search" id="search" placeholder="Search Brand ,Mobile">
+        <button class="c-btn"> <i class="fas fa-search"></i></button>
+      </form>
+
+
+    </div>
+
+    <% if(currentUser && currentUser.username==="admin" ){ %>
+      <a href="/phone">Add a Phone</a>
+      <% } %>
+
+
+
+
+        <div id="mySidenav" class="sidenav" style="z-index: 3;">
+          <span class="closebtn" onclick="closeNav()">&times;</span>
+
+
+
+          <a href="/">Home</a>
+          <a href="/about">About Us</a>
+
+          <div class="comparison-toggler">
+            <span>Top comparisons <i class="fas fa-chevron-down" style="color: white;"></i> </span>
+            <div class="comparisons">
+              <a href="#" class="dropdown1">
+                <div class="navbar-comp">
+                  <div class="navbar-comp-image">
+                    <img src="https://images.samsung.com/my/smartphones/galaxy-s21/buy/s21_family_kv_mo_img.jpg" alt="">
+                  </div>
+                  <div class="comp-text">
+                    <span>samsung Galaxy s21 ultra</span>
+
+                  </div>
+
+
+                </div>
+                <div class="vs">
+                  <span>V/S</span>
+
+                </div>
+                <div class="navbar-comp">
+                  <div class="navbar-comp-image">
+                    <img
+                      src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-12-pro-family-hero?wid=940&amp;hei=1112&amp;fmt=jpeg&amp;qlt=80&amp;.v=1604021663000"
+                      alt="">
+                  </div>
+                  <div class="comp-text">
+                    <span>iphone 12 pro max</span>
+
+                  </div>
+
+
+                </div>
+
+
+              </a>
+              <a href="#" class="dropdown1">
+
+                <div class="navbar-comp">
+                  <div class="navbar-comp-image">
+                    <img
+                      src="https://i01.appmifile.com/webfile/globalimg/products/pc/redmi-note-10-pro/specs-header.png"
+                      alt="">
+                  </div>
+                  <div class="comp-text">
+                    <span>Redmi note 10 pro</span>
+
+                  </div>
+
+
+                </div>
+                <div class="vs">
+                  <span>V/S</span>
+
+                </div>
+                <div class="navbar-comp">
+                  <div class="navbar-comp-image">
+                    <img src="https://image05.realme.net/general/20210319/1616130489804.png" alt="">
+                  </div>
+                  <div class="comp-text">
+                    <span>Realme 8 pro</span>
+
+                  </div>
+
+
+                </div>
+
+
+
+              </a>
+              <a href="#" style="margin-bottom: 10px;" class="dropdown1">
+                <div class="navbar-comp">
+                  <div class="navbar-comp-image">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/71kv86NHSFL._AC_SX679_.jpg" alt="">
+                  </div>
+                  <div class="comp-text">
+                    <span>poco x3</span>
+
+                  </div>
+
+
+                </div>
+                <div class="vs">
+                  <span>V/S</span>
+
+                </div>
+                <div class="navbar-comp">
+                  <div class="navbar-comp-image">
+                    <img src="https://image05.realme.net/general/20201022/1603381922929.jpg" alt="">
+                  </div>
+                  <div class="comp-text">
+                    <span>realme 7 pro</span>
+
+                  </div>
+
+
+                </div>
+
+              </a>
+
+
+
+
+              <a href="Compare more"></a>
+            </div>
+          </div>
+
+          <div class="side-news">
+            <span>
+              News <i class="fas fa-chevron-down" style="color: white;"></i>
+            </span>
+
+            <div class="main-side-news">
+              <a href="#" class="dropdown1">
+                <div class="news-image-navbar">
+                  <div class="on-hover">
+                    Click To read more
+                  </div>
+                  <img
+                    src="https://www.91-cdn.com/hub/wp-content/uploads/2021/04/samsung-galaxy-a22-image-featured.jpeg"
+                    alt="">
+                </div>
+                <div class="news-heading-navbar">
+                  <p>
+                    redmi going to launch new phone in their mid range
+                  </p>
+                  <span class="date">
+                    25 Jun
+
+                  </span>
+
+                </div>
+
+
+
+
+              </a>
+
+            </div>
+
+
+
+
+          </div>
+
+
+        </div>
+
+
+
+
+        <button type="button" class="c-s-toggler" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+          <i class="fas fa-search"></i>
+        </button>
+
+        <% if(!currentUser){ %>
+
+          <a class="sign-in" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Log In</a>
+
+          <% }else{ %>
+
+
+            <div class="user-div">
+              <i class="far fa-user"></i>
+              <div class="user-profile">
+                <ul type="none">
+                  <li class="user-name">Hey!! <%=currentUser.username%>
+                  </li>
+                  <li class="user-links">Watchlist</li>
+                  <li class="user-links"><a href="/auth/logout">Log Out</a></li>
+                </ul>
+              </div>
+
+
+            </div>
+            <% } %>
+
+
+
+
+  </div>
+
+
+
+
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<script src="/javascript/navbar.js"></script>

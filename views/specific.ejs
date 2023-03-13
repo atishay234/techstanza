@@ -1,0 +1,293 @@
+<%layout("/layouts/boilerplate")%>
+    <link rel="stylesheet" href="/css/feature.css">
+
+<section class="landing-feature">
+
+
+
+    <div class="first">  
+        <p>
+            Best 
+            
+            <span style="color: blue;"><%=feature%></span>
+            Phones Absolutely flawless
+        </p>
+        <div class="process">
+            <div class="research iprocess">
+                <img src="research.svg" alt="">
+                <p class="iprocess-para">
+                    Research
+
+                </p>
+
+            </div>
+            <img src="arrow.svg" alt="">
+            <div class="review iprocess">
+                <img src="rating.svg" alt="">
+                <p class="iprocess-para">
+                    Review
+                </p>
+            </div>
+            <img src="arrow.svg" alt="">
+            <div class="conclusion iprocess">
+                <img src="conclusion.svg" alt="">
+                <p class="iprocess-para">
+                     Conclusion
+                </p>
+
+            </div>
+        </div>
+    
+    </div>
+    
+    <div class="second">
+        <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="blob-background" width="100%" id="blobSvg">
+            <defs>
+                <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color: rgb(238, 205, 163);"></stop>
+                    <stop offset="10%" style="stop-color: rgb(239, 98, 159);"></stop>
+                    <stop offset="60%" style="stop-color: #4361ee;"></stop> 
+                    <stop offset="100%" style="stop-color: #3a0ca3;"></stop>
+                </linearGradient>
+            </defs>
+            <path id="blob" d="M431.5,297.5Q397,345,363.5,384.5Q330,424,275,440.5Q220,457,163,437Q106,417,72.5,364.5Q39,312,66.5,258Q94,204,106.5,151.5Q119,99,171,81Q223,63,270,83Q317,103,379.5,115Q442,127,454,188.5Q466,250,431.5,297.5Z" fill="url(#gradient)"></path>
+          </svg>
+        <div class="need">
+            <p>Auto Focus</p>
+            <img src="focus.svg" alt="">
+
+
+
+        </div>
+        <div class="need">
+            <p>
+                Night Mode
+            </p>
+          <img  src="night.svg">
+
+
+
+
+        </div>
+        <div class="need">
+            <p>
+                Pro Video
+            </p>
+            <img src="videography.svg" alt="">
+        </div>
+        <div class="need">
+            <p>
+                Ultimate Selfie
+
+            </p>
+            <img src="selfie.svg" alt="">
+        </div>
+        <div class="need">
+            <p>Optical Zoom</p>
+            <img src="Zoom.svg" alt="">
+        </div>
+
+    </div>
+
+
+
+
+
+
+</section>
+
+
+    <section class="actualC">
+        <div class="actual">
+            <%for(let mobile of mobiles){%>
+                <div class="card">
+                    <img src="<%=mobile.image%>" alt="" width="100%" height="100%">
+                    <div style="flex-wrap:wrap ;padding: 10px;font-size: larger;font-weight: bolder;display: flex;">
+                        <span>
+                            <%=mobile.name%>
+                        </span>
+                        <span
+                            style="display:block;width:100%;align-self:end;  font-weight: 500;margin-bottom: 10px;font-weight: 800;">
+
+                            &#8377;<span style="color:#06d6a0;">
+                                <%=mobile.price%>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="outerclass">
+                        <div class="oneclass">
+                            <i class="fas fa-camera"></i>
+
+                            <ul type="none" style="font-size: small;padding: 0;margin-top: 10px;" class="list">
+                                <li class="element">MP main</li>
+                                <li class="element">MP front </li>
+                                <li class="element"></li>
+                            </ul>
+                        </div>
+                        <div class="oneclass">
+                            <i class="fas fa-tv" style="text-align: center;margin-right: 5px;"></i>
+                            <ul type="none" class="list">
+                                <li class="element"><%=mobile.Display.size%> inches</li>
+                                <li class="element"><%=mobile.Display.category%></li>
+                                <li class="element"><%=mobile.Display.other%></li>
+                            </ul>
+                        </div>
+                        <div class="oneclass">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <ul type="none" class="list" style="border-right: none;">
+                                <li class="element"><%=mobile.processor.category%></li>
+                                <li class="element">Android <%=mobile.processor.operatingSystem%></li>
+                                <li class="element"><%=mobile.processor.clockSpeed%></li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="ratings">
+                      <div class="rating">
+                          <span>7</span>
+                      </div>
+                      <div class="rating">
+                          <span>7</span>
+                      </div>
+                      <div class="rating">
+                          <span>7</span>
+                      </div>
+                      
+
+                    </div>
+                    <div class="view-compare">
+                        <a href="/<%=mobile._id%>" class="view">view</a>
+                        <a href="/compare/?mobile=<%=mobile._id%>">Compare</a>
+                    </div>
+                   
+
+                </div>
+                <%}%>
+        </div>
+    </section>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.1.0/progressbar.min.js"
+    integrity="sha512-EZhmSl/hiKyEHklogkakFnSYa5mWsLmTC4ZfvVzhqYNLPbXKAXsjUYRf2O9OlzQN33H0xBVfGSEIUeqt9astHQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+   
+    <script>
+
+
+
+
+
+
+        // let tl = anime.timeline({
+        //     easing: "linear",
+        //     duration: 1000
+        // });
+        // let tl1 = anime.timeline({
+        //     easing: "linear",
+        //     duration: 1
+        // })
+        // tl.add({
+        //     targets: ".inner1",
+        //     backgroundColor: "rgb(197,195,255)",
+        //     translateX: "-100%",
+
+        // });
+        // anime({
+        //     targets: ".inner2",
+        //     backgroundColor: "rgb(197,195,255)",
+        //     translateX: "100%",
+        //     easing: "linear",
+        //     duration: 1000
+        // });
+        // tl1.add({
+        //     targets: ".inner1",
+        //     height: 0,
+        //     width: 0,
+        //     display: "none",
+        //     delay: 1000
+        // });
+        // anime({
+        //     targets: ".inner2",
+        //     height: 0,
+        //     width: 0,
+        //     delay: 1000
+
+        // });
+        
+        // let num = 0;
+        // anime({
+        //     targets: ".message",
+        //     opacity: 1,
+        //     translateY: 0,
+        //     translateX: "-50%",
+        //     marginTop: 0,
+        //     easing: "easeOutExpo",
+        //     duration: 2000,
+        //     delay: 1200
+        // });
+        // anime({
+        //     targets: "#company",
+        //     translateX: "50%",
+        //     translateY: "80%",
+        //     duration: 1000,
+        //     easing: "linear",
+        //     delay: 1200
+        // });
+        // let hoverMe = anime({
+        //     targets: ".secondSlide",
+        //     marginTop: 0,
+        //     duration: 200,
+        //     easing: "linear",
+        //     autoplay: false
+
+
+        // });
+
+
+
+
+        // let message = document.querySelector(".message");
+        // message.addEventListener("mouseenter", () => {
+        //     hoverMe.play();
+        // })
+
+
+        
+let ratings = document.querySelectorAll(".rating");
+
+ratings.forEach(async (e) => {
+  var bar = new ProgressBar.Circle(e, {
+    color: "#4D61FC",
+    trailColor: "#dee2e6",
+    trailWidth: 10,
+    duration: 1400,
+    easing: "easeInOut",
+    strokeWidth: 10,
+    from: { color: "#8DA5FD", a: 0 },
+    to: { color: "#4D61FC", a: 1 },
+
+    step: function (state, circle) {
+      circle.path.setAttribute("stroke", state.color);
+    },
+  });
+  bar.animate(0.7, { duration: 1500 });
+});
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+    </script>
